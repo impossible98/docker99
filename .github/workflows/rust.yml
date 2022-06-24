@@ -28,6 +28,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "./src/rust"
+          context: "."
+          file: "src/rust/Dockerfile"
           push: true
-          tags: impossible98/rust:latest
+          tags: impossible98/rust:latest, impossible98/rust:1.58.1
